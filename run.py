@@ -97,12 +97,12 @@ if __name__ == '__main__':
                                            shuffle=True, num_workers=2)
   
 
-  optimizer = optim.Adam(alexnet.parameters(),lr=0.0001)
-      # optimizer = optim.SGD(
-    #     params=alexnet.parameters(),
-    #     lr=lr,
-    #     momentum=momentum,
-    #     weight_decay=weight_decay)
+   # optimizer = optim.Adam(alexnet.parameters(),lr=0.0001)
+  optimizer = optim.SGD(
+        params=alexnet.parameters(),
+        lr=lr,
+        momentum=momentum,
+        weight_decay=weight_decay)
 
   lr_scheduler = optim.lr_scheduler.StepLR(optimizer,step_size=30,gamma=0.1)
 
